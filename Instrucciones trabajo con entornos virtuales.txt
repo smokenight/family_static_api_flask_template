@@ -1,0 +1,38 @@
+1. Instalar paquete virtualenv, desde una terminal ejecutar el siguiente comando:
+
+pip install virtualenv
+
+2. Ir a un directorio local (de preferencia uno nuevo) y proceder a crear un nuevo entorno virtual con el siguiente comando (desde la termninal):
+
+virtualenv <nombre_del_entorno_virtual>
+
+Ej. Si mi entorno se llama "venv" se debe de ejecutar
+
+virtualenv venv
+
+3. Activar el entorno virtual para comenzar a desarrollar en Python dentro de el, desde la terminal de la carpeta que crearon en el punto anterior ejecutar:
+
+<nombre_del_entorno_virtual>\Scripts\activate
+
+Ej. Si mi entorno se llama "venv" se debe de ejecutar
+
+venv\Scripts\activate
+
+4. Para desactivar el entorno virtual ejecutar el siguiente comando en la terminal:
+
+deactivate
+
+
+* Si les arroja un error de permisos de ejecución en Windows, ejecutar lo siguiente
+
+1a. Obtener el listado de políticas de ejecución y verificar que para CurrentUser tenga el valor UNDEFINED, ejecutar lo siguiente en la terminal
+
+Get-ExecutionPolicy -List
+
+2a. Modificar la política de ejecución (setear a RemoteSigned) para CurrentUser con el siguiente comando en la terminal:
+
+Set-ExecutionPolicy RemoteSigned -Scope CurrentUser
+
+3a. Verificar que se haya realizado el cambio de la política de ejecución con el comando del punto 1a
+
+Get-ExecutionPolicy -List
